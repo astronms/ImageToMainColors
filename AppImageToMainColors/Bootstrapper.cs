@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using AppImageToMainColors.ViewModels;
+using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AppImageToMainColors
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<ShellViewModel>();
+            DisplayRootViewFor<BaseViewModel>();
         }
     }
 }
