@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AppImageToMainColors.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy BaseView.xaml
+    /// Logika interakcji dla klasy OrginalImageView.xaml
     /// </summary>
-    public partial class BaseView : Window
+    public partial class OrginalImageView : UserControl
     {
-        public BaseView()
+        public OrginalImageView()
         {
             InitializeComponent();
-        }
-
-        private void OrginalImageView_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -2,7 +2,11 @@
 
 namespace ImageProcessingLib
 {
-    public class ImageProcessing
+    public static class ImageProcessing
     {
+        public static void ToMainColors()
+        {
+
+        }
     }
 }

@@ -75,6 +75,12 @@
     <Compile Include="Views\BaseView.xaml.cs">
       <DependentUpon>BaseView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConvertedImageView.xaml.cs">
+      <DependentUpon>ConvertedImageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrginalImageView.xaml.cs">
+      <DependentUpon>OrginalImageView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
@@ -109,6 +115,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\BaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConvertedImageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrginalImageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
