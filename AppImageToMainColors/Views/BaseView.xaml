@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppImageToMainColors.Views"
         mc:Ignorable="d"
-        Title="BaseView" Height="450" Width="800">
+        Title="Convert Image to Main Colors" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="450" />
             
         </Grid.ColumnDefinitions>
         <local:OrginalImageView Grid.Column="0" />
-        <local:ConvertedImageView Grid.Column="1" />
+        <local:ConvertedImageView Grid.Column="1" Loaded="ConvertedImageView_Loaded" />
     </Grid>
 </Window>

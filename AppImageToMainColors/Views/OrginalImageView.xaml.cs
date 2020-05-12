@@ -24,5 +24,6 @@ namespace AppImageToMainColors.Views
         {
             InitializeComponent();
         }
+
     }
 }

@@ -24,9 +24,5 @@ namespace AppImageToMainColors.Views
             InitializeComponent();
         }
 
-        private void OrginalImageView_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
