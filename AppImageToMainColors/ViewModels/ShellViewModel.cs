@@ -11,6 +11,7 @@ namespace AppImageToMainColors.ViewModels
     {
         private string _filePath;
         private bool _isSaveButtonEnable = false;
+        private bool _isImageExist = false;
         private BitmapSource _originalImage;
         private string _convertTime;
         private BitmapSource _convertedImage;
@@ -21,25 +22,36 @@ namespace AppImageToMainColors.ViewModels
             {
                 return _filePath;
             }
-            private set
+            set
             {
                 _filePath = value;
                 NotifyOfPropertyChange(() => FilePath);
             }
         }
 
-        public bool IsSaveButtonEnable
+        public bool IsImageExist
         {
             get {
-                return _isSaveButtonEnable;
+                return _isImageExist;
             }
             private set 
+            {
+                _isImageExist = value;
+                NotifyOfPropertyChange(() => IsImageExist);
+            }
+        }
+        public bool IsSaveButtonEnable
+        {
+            get
+            {
+                return _isSaveButtonEnable;
+            }
+            private set
             {
                 _isSaveButtonEnable = value;
                 NotifyOfPropertyChange(() => IsSaveButtonEnable);
             }
         }
-
 
         public BitmapSource OriginalImage
         {
@@ -50,6 +62,7 @@ namespace AppImageToMainColors.ViewModels
             private set
             {
                 _originalImage = value;
+                IsImageExist = true;
                 NotifyOfPropertyChange(() => OriginalImage);
             }
         }
@@ -86,7 +99,7 @@ namespace AppImageToMainColors.ViewModels
             if (dialogOK == true)
             {
                 FilePath = openFileDialog.FileName;
-                OriginalImage = new BitmapImage(new Uri(FilePath, UriKind.Absolute));
+                OriginalImage = new BitmapImage(new Uri(FilePath));
             }
             
         }
@@ -116,7 +129,7 @@ namespace AppImageToMainColors.ViewModels
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = "";
-            saveFileDialog.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Png Image|*.png";
+            saveFileDialog.Filter = "Jpg Image|*.jpg|Bitmap Image|*.bmp|Png Image|*.png";
             
             if (saveFileDialog.ShowDialog() == true)
             {

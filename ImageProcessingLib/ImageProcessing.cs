@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ImageProcessingLib
@@ -27,7 +22,6 @@ namespace ImageProcessingLib
         public static byte[] GetBitmapPixels(BitmapSource bitmapSource)
         {
             var stride = GetStride(bitmapSource);
-
             var pixels = new byte[bitmapSource.PixelHeight * stride];
             bitmapSource.CopyPixels(pixels, stride, 0);
             return pixels;
