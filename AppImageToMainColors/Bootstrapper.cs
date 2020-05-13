@@ -18,7 +18,7 @@ namespace AppImageToMainColors
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<BaseViewModel>();
+            DisplayRootViewFor<ShellViewModel>();
         }
     }
 }

@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace AppImageToMainColors.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy BaseView.xaml
+    /// Logika interakcji dla klasy ShellView.xaml
     /// </summary>
-    public partial class BaseView : Window
+    public partial class ShellView : Window
     {
-        public BaseView()
+        public ShellView()
         {
             InitializeComponent();
         }
-
     }
 }
