@@ -15,8 +15,6 @@ namespace AppImageToMainColors.UnitTest
         private readonly string _testFileBlue = TestContext.CurrentContext.TestDirectory + @"\\TestFiles\\blueImage.jpg";
         private readonly string _testFileGreen = TestContext.CurrentContext.TestDirectory + @"\\TestFiles\\greenImage.jpg";
 
-
-
         [Test]
         public void NewFileLocation_NewImageLoadedCorrectly()
         {
